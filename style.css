@@ -1,0 +1,26 @@
+/*
+Theme Name:     2014baby
+Description:    Child Theme for 2014wp
+Author:         Rob
+Template:       twentyfourteen
+
+(optional values you can add: Theme URI, Author URI, Version)
+*/
+
+@import url("../twentyfourteen/style.css");
+
+/**
+* Tweak for Disqus twentyfourteen theme doesn't properly contain Disqus(found at http://niteshoswal.me/2013/12/disqus-tweak-for-twenty-fourteen-wordpress-theme/)
+*/
+#disqus_thread { /*target container id of disqus iframe*/
+width:80%!important;
+margin: 0 auto;
+}
+
+/**
+* Bring ping display from Force Ping Display with Disqus plugin in line with disqus. 
+*/
+#pingtrackback { 
+width:80%!important;
+margin: 0 auto;
+}
