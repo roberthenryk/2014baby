@@ -1,8 +1,8 @@
 <?php
 /**
  * The template for displaying Author archive pages
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
+ * Customized to work with StarBox Plugin
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -10,6 +10,7 @@
  */
 
 get_header(); ?>
+
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
@@ -30,11 +31,12 @@ get_header(); ?>
 						printf( __( 'All posts by %s', 'twentyfourteen' ), get_the_author() );
 					?>
 				</h1>
-				<?php
-				global $post;
-				$author = get_userdata($post->post_author);
-				echo starBoxShow( $author->ID ); ?>
-				
+				<!-- begin custom -->
+					<?php
+					global $post;
+					$author = get_userdata($post->post_author);
+					echo starBoxShow( $author->ID ); ?>
+				<!-- end custom -->
 			</header><!-- .archive-header -->
 
 			<?php
